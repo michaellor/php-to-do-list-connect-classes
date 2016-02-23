@@ -28,7 +28,7 @@
             //Arrange
             $name = "Home stuff";
             $id = null;
-            $test_Category = new Category($name, $id);
+            $test_category = new Category($name, $id);
             $test_category->save();
 
             $description = "Wash the dog";
@@ -106,7 +106,7 @@
             $test_task->save();
 
             //Act
-            $result = $test_Task->getCategoryId();
+            $result = $test_task->getCategoryId();
 
             //Assert
             $this->assertEquals(true, is_numeric($result));
@@ -126,7 +126,7 @@
             $test_task->save();
 
             //Act
-            $result = $test_Task->getId();
+            $result = $test_task->getId();
 
             //Assert
             $this->assertEquals(true, is_numeric($result));
