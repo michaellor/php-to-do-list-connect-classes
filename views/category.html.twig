@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>To Do List</title>
+</head>
+<body>
+    {% for category in categories %}
+    <h1>{{ category.getName }}</h1>
+    {% endfor %}
+
+
+  
+
+    <form action='/tasks' method='post'>
+        <input id="category_id" name="category_id" type="hidden" value="{{ category.getId() }}">
+        <label for='description'>Task Description</label>
+        <input id='description' name='description' type='text'>
+
+        <button type='submit'>Add task</button>
+    </form>
+
+    <p><a href='/'>Home</a></p>
+</body>
+</html>

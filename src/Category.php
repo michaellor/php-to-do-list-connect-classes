@@ -27,8 +27,8 @@
 
         function getTasks()
         {
-            $tasks = Array();
-            $returned_tasks = $GLOBALS['DB']->query("SELECT * FROM tasks WHERE category_id = {$this->getId()};");
+            $tasks = array();
+            $returned_tasks = $GLOBALS['DB']->query("SELECT * FROM tasks WHERE category_id = {$this->getId()}");
             foreach($returned_tasks as $task) {
                 $description = $task['description'];
                 $id = $task['id'];
