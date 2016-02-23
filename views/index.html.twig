@@ -12,6 +12,7 @@
         <input id="name" name="name" type="text">
 
         <button type="submit">Add category</button>
+
     </form>
 
     {% if categories is not empty %}
@@ -24,6 +25,10 @@
     {% else %}
         <p>There are no categories yet!</p>
     {% endif %}
+    
+    <form action='/delete_categories' method='post'>
+        <button type='submit'>Clear</button>
+    </form>
 
 </body>
 </html>
